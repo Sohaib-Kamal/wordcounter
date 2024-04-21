@@ -27,7 +27,7 @@ export const diagonostics = async () => {
     console.log(chalk.cyanBright(`
                           Word Frequency Analysis:`));
     Object.entries(wordFrequencies).forEach(([word, frequency]) => {
-        console.log(chalk.magentaBright.bold(`                  ${word}: ${frequency} times`));
+        console.log(chalk.magentaBright.bold(`                  ${word}: ${frequency} Times`));
     });
     console.log(chalk.cyanBright("                 ********************************************"));
 };
