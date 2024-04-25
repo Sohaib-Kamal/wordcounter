@@ -17,6 +17,7 @@ async function wantRepeat(fun:Function){
     type:"confirm",default:false,}])
     condition = repeat.choice
     }while (condition)
+        console.log(chalk.bgYellowBright.blueBright.bold("           Thank you for using Sohaib Sentence Diagonostics           "))
 }
 wantRepeat(diagonostics)
 

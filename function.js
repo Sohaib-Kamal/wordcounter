@@ -2,6 +2,7 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 export const diagonostics = async () => {
     const input = await inquirer.prompt([{ name: "txt", message: chalk.yellowBright("Enter your sentence..."), type: "input" }]);
+    const vowelCount = chalk.bold.magentaBright(input.txt.length - input.txt.replace(/[aeiou]/gi, "").length);
     const wordsArray = input.txt.trim().split(/\s+/);
     const wordsCount = chalk.bold.magentaBright(wordsArray.length);
     const lettersCount = chalk.magentaBright.bold(wordsArray.join("").length);
@@ -22,7 +23,7 @@ export const diagonostics = async () => {
                   Letter Count: ${lettersCount} letters  
                   No. of Articles: ${noOfArticles} artciles
                   No. of Pronouns: ${pronounCount} pronouns
-
+                  No. of Vowels: ${vowelCount} vowels
                  ********************************************`));
     console.log(chalk.cyanBright(`
                           Word Frequency Analysis:`));
